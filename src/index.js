@@ -10,7 +10,6 @@ import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 import { requestRobots, searchRobots } from './reducers'
 
-
 import './index.css';
 
 const logger = createLogger() 
