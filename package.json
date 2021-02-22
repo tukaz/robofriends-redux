@@ -1,4 +1,5 @@
 {
+  "homepage": "./",
   "name": "robofriends",
   "version": "0.1.0",
   "private": true,
@@ -12,9 +13,14 @@
     "redux-thunk": "^2.3.0",
     "tachyons": "^4.12.0"
   },
+  "devDependencies": {
+    "gh-pages": "^0.11.0",
+    "sw-precache": "^4.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp manifest.json build/ && sw-precache --root='build/' --static-file-globs='build/**/!(*map*)'",
+    "gh-pages": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
